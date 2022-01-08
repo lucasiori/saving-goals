@@ -165,6 +165,7 @@ const MonthlyAmount = styled.section`
 const MonthAmountValue = styled.div`
   display: flex;
   flex: 1;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
 
@@ -180,6 +181,7 @@ const MonthAmountValue = styled.div`
     color: ${({ theme }) => theme.colors.secondary};
     font-size: ${({ theme }) => theme.font.sizes.lg};
     font-weight: ${({ theme }) => theme.font.weights.medium};
+    word-break: break-all;
   }
 
   @media screen and (max-width: ${theme.breakpoints.sm}) {
@@ -203,6 +205,7 @@ const MonthlyAmountDisclaimer = styled.div`
 
     strong {
       font-weight: ${({ theme }) => theme.font.weights.semiBold};
+      word-break: break-all;
     }
   }
 
