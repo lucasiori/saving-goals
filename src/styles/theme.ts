@@ -36,6 +36,16 @@ const theme = {
       md: '1.5rem',
       lg: '2rem',
     },
+    weights: {
+      regular: 400,
+      medium: 400,
+      semiBold: 600,
+      bold: 700,
+    },
+    lineHeights: {
+      md: 1,
+      lg: 1.5,
+    },
   },
   spacings: {
     xxxs: '0.25rem',
@@ -47,6 +57,15 @@ const theme = {
     xlg: '2.5rem',
     xxlg: '3rem',
     xxxlg: '3.5rem',
+  },
+  borders: {
+    radius: {
+      xs: '2px',
+      sm: '4px',
+      md: '8px',
+      lg: '30px',
+      circle: '50%',
+    },
   },
 };
 

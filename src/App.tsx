@@ -1,6 +1,7 @@
 import ThemeProvider from './components/ThemeProvider';
 import Header from './components/Header';
 import GlobalStyles from './styles/global';
+import SavingGoal from './components/views/SavingGoal';
 
 export function App(): JSX.Element {
   return (
@@ -9,7 +10,10 @@ export function App(): JSX.Element {
 
       <ThemeProvider>
         <Header />
-        <main />
+
+        <main>
+          <SavingGoal />
+        </main>
       </ThemeProvider>
     </>
   );
