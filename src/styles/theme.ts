@@ -12,6 +12,7 @@ const theme = {
   },
   colors: {
     blueGray: {
+      '10': '#f4f8fA',
       '100': '#cbd5dc',
       '300': '#8a9ca9',
       '400': '#708797',
@@ -21,7 +22,6 @@ const theme = {
     default: '#fff',
     primary: '#1b31a8',
     secondary: '#0079ff',
-    background: '#e5e5e5',
   },
   font: {
     families: {
@@ -59,6 +59,10 @@ const theme = {
     xxxlg: '3.5rem',
   },
   borders: {
+    width: {
+      sm: '2px',
+      lg: '2px',
+    },
     radius: {
       xs: '2px',
       sm: '4px',

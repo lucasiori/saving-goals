@@ -7,7 +7,7 @@ const Wrapper = styled.section`
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-top: ${({ theme }) => theme.spacings.xxlg};
+  padding: ${({ theme }) => `${theme.spacings.xxlg} 0`};
 
   h2 {
     font-family: ${({ theme }) => theme.font.families.content};
@@ -40,17 +40,23 @@ const ContentBox = styled.div`
   max-width: 560px;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: stretch;
   justify-content: center;
   background-color: ${({ theme }) => theme.colors.default};
   border-radius: ${({ theme }) => theme.borders.radius.md};
   box-shadow: 0px 16px 32px rgba(30, 42, 50, 0.08);
-  padding: ${({ theme }) => `2.25rem ${theme.spacings.xlg}`};
+  padding: ${({ theme }) =>
+    `${theme.spacings.lg} ${theme.spacings.xlg} ${theme.spacings.xlg}`};
+
+  @media screen and (max-width: ${theme.breakpoints.sm}) {
+    padding: ${({ theme }) =>
+      `${theme.spacings.md} ${theme.spacings.md} ${theme.spacings.xlg}`};
+  }
 `;
 
 const ContentBoxHeader = styled.header`
-  width: 100%;
   display: flex;
+  flex: 1;
   align-items: center;
 
   img {
@@ -90,4 +96,84 @@ const ContentBoxHeader = styled.header`
   }
 `;
 
-export { Wrapper, ContentBox, ContentBoxHeader };
+const MonthlyAmount = styled.section`
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: center;
+  border: ${({ theme }) =>
+    `${theme.borders.width.lg} solid ${theme.colors.blueGray['10']}`};
+  border-radius: ${({ theme }) => theme.borders.radius.md};
+  margin-top: ${({ theme }) => theme.spacings.md};
+
+  div {
+    padding: ${({ theme }) => `${theme.spacings.md} ${theme.spacings.lg}`};
+  }
+
+  @media screen and (max-width: ${theme.breakpoints.sm}) {
+    div {
+      padding: ${({ theme }) => theme.spacings.md};
+    }
+  }
+`;
+
+const MonthAmountValue = styled.div`
+  display: flex;
+  flex: 1;
+  align-items: center;
+  justify-content: space-between;
+
+  h5 {
+    font-family: ${({ theme }) => theme.font.families.content};
+    color: ${({ theme }) => theme.colors.blueGray['900']};
+    font-size: ${({ theme }) => theme.font.sizes.sm};
+    font-weight: ${({ theme }) => theme.font.weights.regular};
+  }
+
+  strong {
+    font-family: ${({ theme }) => theme.font.families.heading};
+    color: ${({ theme }) => theme.colors.secondary};
+    font-size: ${({ theme }) => theme.font.sizes.lg};
+    font-weight: ${({ theme }) => theme.font.weights.medium};
+  }
+
+  @media screen and (max-width: ${theme.breakpoints.sm}) {
+    h5 {
+      font-size: 1.125rem;
+    }
+
+    strong {
+      font-size: ${({ theme }) => theme.font.sizes.md};
+    }
+  }
+`;
+
+const MonthlyAmountDisclaimer = styled.div`
+  background-color: ${({ theme }) => theme.colors.blueGray['10']};
+
+  p {
+    color: ${({ theme }) => theme.colors.blueGray['900']};
+    font-size: ${({ theme }) => theme.font.sizes.xxxs};
+    line-height: ${({ theme }) => theme.font.lineHeights.lg};
+
+    strong {
+      font-weight: ${({ theme }) => theme.font.weights.semiBold};
+    }
+  }
+
+  @media screen and (max-width: ${theme.breakpoints.sm}) {
+    p {
+      text-align: center;
+    }
+  }
+`;
+
+export {
+  Wrapper,
+  ContentBox,
+  ContentBoxHeader,
+  MonthlyAmount,
+  MonthAmountValue,
+  MonthlyAmountDisclaimer,
+};
