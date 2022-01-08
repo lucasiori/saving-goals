@@ -1,5 +1,5 @@
-import { ThemeProvider } from 'styled-components';
-import theme from './styles/theme';
+import ThemeProvider from './components/ThemeProvider';
+import Header from './components/Header';
 import GlobalStyles from './styles/global';
 
 export function App(): JSX.Element {
@@ -7,8 +7,8 @@ export function App(): JSX.Element {
     <>
       <GlobalStyles />
 
-      <ThemeProvider theme={theme}>
-        <header />
+      <ThemeProvider>
+        <Header />
         <main />
       </ThemeProvider>
     </>
