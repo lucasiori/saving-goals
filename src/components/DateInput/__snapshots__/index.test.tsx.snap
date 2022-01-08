@@ -1,0 +1,55 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DateInput renders correctly 1`] = `
+<div
+  className="sc-bdnxRM gQFGBg"
+  data-focused={false}
+>
+  <input
+    data-id="date-input"
+    id="date-input-test"
+    name="date-input-test"
+    onBlur={[Function]}
+    onChange={[Function]}
+    onFocus={[Function]}
+    onKeyUp={[Function]}
+    type="text"
+    value="0-0"
+  />
+  <button
+    className="sc-gtsrHT iuILPr"
+    data-id="prev-button"
+    disabled={true}
+    onClick={[Function]}
+    type="button"
+  >
+    <img
+      alt="Previous"
+      src="chevron-left.svg"
+      width="24px"
+    />
+  </button>
+  <div
+    className="sc-dlnjwi jFDLXd"
+  >
+    <strong>
+      January
+    </strong>
+    <span>
+      0001
+    </span>
+  </div>
+  <button
+    className="sc-gtsrHT iuILPr"
+    data-id="next-button"
+    onClick={[Function]}
+    type="button"
+  >
+    <img
+      alt="Next"
+      src="chevron-right.svg"
+      width="24px"
+    />
+  </button>
+</div>
+`;

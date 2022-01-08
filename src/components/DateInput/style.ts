@@ -1,6 +1,8 @@
 import styled from 'styled-components';
 
 const Wrapper = styled.div`
+  position: relative;
+  min-width: 215px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -9,19 +11,31 @@ const Wrapper = styled.div`
   border-radius: ${({ theme }) => theme.borders.radius.sm};
   padding: ${({ theme }) => `${theme.spacings.xxxs} ${theme.spacings.xs}`};
 
-  button {
-    width: 24px;
-    height: 24px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: none;
-    border: 0;
+  &[data-focused='true'] {
+    border: ${({ theme }) =>
+      `${theme.borders.width.lg} solid ${theme.colors.dark}`};
   }
 
   input {
-    display: none;
-    visibility: hidden;
+    position: absolute;
+    width: ${({ theme }) => `calc(100% - (${theme.spacings.xs} * 2))`};
+    opacity: 0;
+    z-index: -1;
+  }
+`;
+
+const ArrowControl = styled.button`
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  border: 0;
+
+  &[disabled] {
+    cursor: not-allowed;
+    opacity: 0.5;
   }
 `;
 
@@ -47,4 +61,4 @@ const Content = styled.div`
   }
 `;
 
-export { Wrapper, Content };
+export { Wrapper, ArrowControl, Content };

@@ -21,6 +21,7 @@ const theme = {
       '900': '#1e2a32',
     },
     default: '#fff',
+    dark: '#000',
     primary: '#1b31a8',
     secondary: '#0079ff',
   },
