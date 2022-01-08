@@ -4,7 +4,7 @@
 </p>
 
 <p align="center">
-  <img src="https://github.com/lucasiori/saving-goals/blob/main/.github/logo.png" alt="Logo" height="200" />
+  <img src="https://github.com/lucasiori/saving-goals/blob/main/.github/logo.png" alt="Logo" height="150" />
 </p>
 
 <h1 align="center">Saving Goals</h1>
