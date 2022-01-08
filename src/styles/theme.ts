@@ -13,6 +13,7 @@ const theme = {
   colors: {
     blueGray: {
       '10': '#f4f8fA',
+      '50': '#e9eef2',
       '100': '#cbd5dc',
       '300': '#8a9ca9',
       '400': '#708797',
@@ -60,7 +61,7 @@ const theme = {
   },
   borders: {
     width: {
-      sm: '2px',
+      sm: '1px',
       lg: '2px',
     },
     radius: {

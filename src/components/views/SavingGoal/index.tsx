@@ -1,4 +1,5 @@
 import Button from '../../Button';
+import DateInputCP from '../../DateInput';
 import buyAHouse from '../../../assets/icons/buy-a-house.svg';
 import {
   Wrapper,
@@ -35,7 +36,7 @@ export default function SavingGoal(): JSX.Element {
 
           <div>
             <label htmlFor="reachDate">Reach goal by</label>
-            <input type="text" id="reachDate" name="reachDate" />
+            <DateInputCP id="reachDate" />
           </div>
         </InputsGroup>
 

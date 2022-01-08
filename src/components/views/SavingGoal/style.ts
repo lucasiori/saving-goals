@@ -64,7 +64,7 @@ const ContentBoxHeader = styled.header`
     height: 64px;
   }
 
-  div {
+  > div {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -103,7 +103,7 @@ const InputsGroup = styled.section`
   justify-content: stretch;
   margin-top: 1.75rem;
 
-  div {
+  > div {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -151,7 +151,7 @@ const MonthlyAmount = styled.section`
   border-radius: ${({ theme }) => theme.borders.radius.md};
   margin-top: ${({ theme }) => theme.spacings.md};
 
-  div {
+  > div {
     padding: ${({ theme }) => `${theme.spacings.md} ${theme.spacings.lg}`};
   }
 
