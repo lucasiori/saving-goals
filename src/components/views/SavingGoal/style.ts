@@ -96,6 +96,50 @@ const ContentBoxHeader = styled.header`
   }
 `;
 
+const InputsGroup = styled.section`
+  display: flex;
+  flex: 1;
+  align-items: center;
+  justify-content: stretch;
+  margin-top: 1.75rem;
+
+  div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    &:first-child {
+      flex: 1;
+    }
+
+    &:last-child {
+      margin-left: ${({ theme }) => theme.spacings.xs};
+    }
+  }
+
+  label {
+    color: ${({ theme }) => theme.colors.blueGray['900']};
+    font-size: ${({ theme }) => theme.font.sizes.xxs};
+    font-weight: ${({ theme }) => theme.font.weights.regular};
+    line-height: ${({ theme }) => theme.font.lineHeights.lg};
+    margin-bottom: ${({ theme }) => theme.spacings.xxxs};
+  }
+
+  @media screen and (max-width: ${theme.breakpoints.sm}) {
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: center;
+
+    div {
+      &:last-child {
+        flex: 1;
+        margin-top: ${({ theme }) => theme.spacings.xs};
+        margin-left: 0;
+      }
+    }
+  }
+`;
+
 const MonthlyAmount = styled.section`
   display: flex;
   flex: 1;
@@ -173,6 +217,7 @@ export {
   Wrapper,
   ContentBox,
   ContentBoxHeader,
+  InputsGroup,
   MonthlyAmount,
   MonthAmountValue,
   MonthlyAmountDisclaimer,

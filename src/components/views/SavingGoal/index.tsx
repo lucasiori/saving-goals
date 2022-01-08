@@ -4,12 +4,13 @@ import {
   Wrapper,
   ContentBox,
   ContentBoxHeader,
+  InputsGroup,
   MonthlyAmount,
   MonthAmountValue,
   MonthlyAmountDisclaimer,
 } from './style';
 
-export default function SavingGoalCP(): JSX.Element {
+export default function SavingGoal(): JSX.Element {
   return (
     <Wrapper>
       <h2>
@@ -25,6 +26,18 @@ export default function SavingGoalCP(): JSX.Element {
             <span>Saving goal</span>
           </div>
         </ContentBoxHeader>
+
+        <InputsGroup>
+          <div>
+            <label htmlFor="amount">Total amount</label>
+            <input type="text" id="amount" name="amount" />
+          </div>
+
+          <div>
+            <label htmlFor="reachDate">Reach goal by</label>
+            <input type="text" id="reachDate" name="reachDate" />
+          </div>
+        </InputsGroup>
 
         <MonthlyAmount>
           <MonthAmountValue>
