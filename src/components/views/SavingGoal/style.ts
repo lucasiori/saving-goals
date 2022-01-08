@@ -130,7 +130,7 @@ const InputsGroup = styled.section`
     align-items: stretch;
     justify-content: center;
 
-    div {
+    > div {
       &:last-child {
         flex: 1;
         margin-top: ${({ theme }) => theme.spacings.xs};
