@@ -1,3 +1,4 @@
+import Button from '../../Button';
 import buyAHouse from '../../../assets/icons/buy-a-house.svg';
 import { Wrapper, ContentBox, ContentBoxHeader } from './style';
 
@@ -17,6 +18,10 @@ export default function SavingGoalCP(): JSX.Element {
             <span>Saving goal</span>
           </div>
         </ContentBoxHeader>
+
+        <footer>
+          <Button type="button">Confirm</Button>
+        </footer>
       </ContentBox>
     </Wrapper>
   );

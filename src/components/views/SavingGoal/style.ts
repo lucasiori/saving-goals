@@ -22,6 +22,14 @@ const Wrapper = styled.section`
     }
   }
 
+  footer {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: ${({ theme }) => theme.spacings.lg};
+  }
+
   @media screen and (max-width: ${theme.breakpoints.sm}) {
     padding-top: ${({ theme }) => theme.spacings.lg};
   }
