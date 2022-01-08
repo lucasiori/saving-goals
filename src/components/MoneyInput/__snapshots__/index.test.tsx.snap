@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MoneyInput renders correctly 1`] = `
+<div
+  className="sc-bdnxRM dKKJJO"
+>
+  <img
+    alt="Dollar"
+    src="dollar-sign.svg"
+    width="24px"
+  />
+  <input
+    className="sc-gtsrHT wdgxn"
+    data-id="money-input"
+    id="money-input-test"
+    inputMode="numeric"
+    name="money-input-test"
+    onBlur={[Function]}
+    onChange={[Function]}
+    onFocus={[Function]}
+    onKeyDown={[Function]}
+    onMouseUp={[Function]}
+    type="text"
+    value=""
+  />
+</div>
+`;

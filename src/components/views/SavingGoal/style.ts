@@ -99,7 +99,7 @@ const ContentBoxHeader = styled.header`
 const InputsGroup = styled.section`
   display: flex;
   flex: 1;
-  align-items: center;
+  align-items: stretch;
   justify-content: stretch;
   margin-top: 1.75rem;
 
