@@ -1,4 +1,3 @@
-/* eslint-disable react-hooks/exhaustive-deps */
 import { getMonth, getYear } from 'date-fns';
 import { useEffect, useState } from 'react';
 

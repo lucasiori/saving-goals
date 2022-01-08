@@ -1,6 +1,7 @@
 import Button from '../../Button';
 import MoneyInput from '../../MoneyInput';
 import DateInput from '../../DateInput';
+import { formatToNumber } from '../../../utils/format';
 import buyAHouse from '../../../assets/icons/buy-a-house.svg';
 import {
   Wrapper,
@@ -11,8 +12,57 @@ import {
   MonthAmountValue,
   MonthlyAmountDisclaimer,
 } from './style';
+import useSavingGoal from '../../../hooks/use-saving-goal';
 
 export default function SavingGoal(): JSX.Element {
+  const {
+    amount,
+    monthlyAmount,
+    reachDateInMonths,
+    fullDate,
+    setAmount,
+    setReachDate,
+  } = useSavingGoal();
+
+  const formattedAmount = amount ? formatToNumber(amount) : undefined;
+  const formattedMonthlyAmount = monthlyAmount
+    ? formatToNumber(monthlyAmount)
+    : undefined;
+
+  function handleChangeDate(month: number, year: number): void {
+    setReachDate({ month, year });
+  }
+
+  function getDisclaimerContent(): React.ReactNode {
+    const formattedDepositWord = reachDateInMonths > 1 ? 'deposits' : 'deposit';
+
+    if (!formattedAmount) {
+      return (
+        <>
+          You’re planning
+          <strong>
+            {` ${reachDateInMonths} montlhy ${formattedDepositWord} `}
+          </strong>
+          to reach your goal by
+          <strong>{` ${fullDate}.`}</strong>
+        </>
+      );
+    }
+
+    return (
+      <>
+        You’re planning
+        <strong>
+          {` ${reachDateInMonths} montlhy ${formattedDepositWord} `}
+        </strong>
+        to reach your
+        <strong>{` $ ${formattedAmount} `}</strong>
+        goal by
+        <strong>{` ${fullDate}.`}</strong>
+      </>
+    );
+  }
+
   return (
     <Wrapper>
       <h2>
@@ -32,27 +82,27 @@ export default function SavingGoal(): JSX.Element {
         <InputsGroup>
           <div>
             <label htmlFor="amount">Total amount</label>
-            <MoneyInput id="amount" />
+            <MoneyInput
+              id="amount"
+              value={amount}
+              onChange={(value) => setAmount(value || 0)}
+            />
           </div>
 
           <div>
             <label htmlFor="reachDate">Reach goal by</label>
-            <DateInput id="reachDate" />
+            <DateInput id="reachDate" onChangeDate={handleChangeDate} />
           </div>
         </InputsGroup>
 
         <MonthlyAmount>
           <MonthAmountValue>
             <h5>Monthly amount</h5>
-            <strong>$520.83</strong>
+            <strong>{`$ ${formattedMonthlyAmount || ''}`}</strong>
           </MonthAmountValue>
 
           <MonthlyAmountDisclaimer>
-            <p>
-              You’re planning <strong>48 monthly deposits</strong> to reach your
-              <strong> $25,000</strong> goal by
-              <strong> October 2020.</strong>
-            </p>
+            <p>{getDisclaimerContent()}</p>
           </MonthlyAmountDisclaimer>
         </MonthlyAmount>
 

@@ -34,7 +34,7 @@ export default function DateInputCP({
 
   useEffect(() => {
     onChangeDate(selectedMonth, selectedYear);
-  }, [selectedMonth, selectedYear, onChangeDate]);
+  }, [selectedMonth, selectedYear]);
 
   return (
     <Wrapper data-focused={isFocused}>

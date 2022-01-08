@@ -4,11 +4,13 @@ import { Wrapper, Input } from './style';
 
 interface MoneyInputProps {
   id: string;
+  value?: number;
   onChange?: (value?: number) => void;
 }
 
 export default function MoneyInputCP({
   id,
+  value,
   onChange,
 }: MoneyInputProps): JSX.Element {
   function handleChangeValue(value: NumberFormatValues) {
@@ -28,6 +30,7 @@ export default function MoneyInputCP({
         name={id}
         thousandSeparator=","
         allowNegative={false}
+        value={value}
         onValueChange={handleChangeValue}
       />
     </Wrapper>
