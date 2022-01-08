@@ -10,26 +10,26 @@
 <h1 align="center">Saving Goals</h1>
 
 <p align="center">
-  <a href="#about">Sobre</a> &nbsp;&nbsp;|&nbsp;&nbsp;
-  <a href="#techs">Tecnologias</a> &nbsp;&nbsp;|&nbsp;&nbsp;
-  <a href="#running-application">Executando a aplicação</a> &nbsp;&nbsp;|&nbsp;&nbsp;
+  <a href="#about">About</a> &nbsp;&nbsp;|&nbsp;&nbsp;
+  <a href="#techs">Technologies</a> &nbsp;&nbsp;|&nbsp;&nbsp;
+  <a href="#running-application">Running application</a> &nbsp;&nbsp;|&nbsp;&nbsp;
   <a href="#preview">Preview</a>
 </p>
 
-<h2 id="about">ℹ Sobre</h2>
+<h2 id="about">ℹ About</h2>
 
-<p><strong>Saving Goals</strong> é um projeto que simula um fluxo de uma plataforma para auxílio de finanças.</p>
-<p>Nesse fluxo você define uma quantia que será poupada para determinado objetivo (no caso deste projeto, compra de uma casa) e a data que deseja resgatar o valor. Feito isso, a aplicação mostra qual será o valor que deverá ser poupado por mês para atingir o objetivo.</p>
+<p><strong>Saving Goals</strong> is a porject that simulates the flow of a platform to manage your finances.</p>
+<p>In this flow, you can define a value that will be saved for a certain goal (in the case of this project, it's the purchase of a house) and the date you want to redeem the amount. This way, the application shows the amount to be saved to reach the goal.</p>
 
 <br />
 
-<h2 id="techs">🔧 Tecnologias</h2>
+<h2 id="techs">🔧 Technologies</h2>
 
 <table width="100%" align="center">
   <tbody>
     <tr>
       <td width="25%" align="center" vertical-align="middle">
-        <a href="https://pt-br.reactjs.org/" target="_blank">
+        <a href="https://reactjs.org/" target="_blank">
           <img src="https://github.com/lucasiori/saving-goals/blob/main/.github/reactjs.png" alt="React JS" height="100" />
         </a>
       </td>
@@ -61,58 +61,59 @@
 
 <br />
 
-<h2 id="running-application">✅ Executando a aplicação</h2>
+<h2 id="running-application">✅ Running application</h2>
 
-<strong>Requisitos:</strong>
+<strong>Requirements:</strong>
 <ul>
   <li>Node.js</li>
-  <li>Gerenciador de pacotes: NPM ou Yarn</li>
+  <li>Package manager: NPM ou Yarn</li>
 </ul>
 
 <p>
-  Primeiramente, clone o repositório na sua máquina local: <br />
+  First, clone this repository on your local machine: <br />
   <code>git clone https://github.com/lucasiori/saving-goals</code>
 </p>
 
 <p>
-  Acesse a pasta do projeto, e no terminal execute o comando para instalar as dependências: <br />
+  Access the project file, and in the terminal, run the command to install the dependencies: <br />
   <ul>
     <li>
-      <strong>se estiver utilizando NPM: </strong> <br />
+      <strong>if using NPM: </strong> <br />
       <code>npm install</code>
     </li>
     <li>
-      <strong>se estiver utilizando Yarn: </strong> <br />
+      <strong>if using Yarn: </strong> <br />
       <code>yarn</code>
     </li>
   </ul>
 </p>
 
 <p>
-  Após instaladas as dependências, certifique-se de que a porta <strong>3000</strong> está disponível, pois é a porta onde a aplicação será executada. <br />
-  Para iniciar a aplicação, execute o comando: <br />
+  After installing the dependencies, make sure that port <strong>3000</strong> is available, it is the port where the application will run. <br />
+  To starting application, run the command: <br />
   <ul>
     <li>
-      <strong>se estiver utilizando NPM: </strong> <br />
+      <strong>if using NPM: </strong> <br />
       <code>npm run start</code>
     </li>
     <li>
-      <strong>se estiver utilizando Yarn: </strong> <br />
+      <strong>if using Yarn: </strong> <br />
       <code>yarn start</code>
     </li>
   </ul>
 </p>
 
-<strong>Testes:</strong>
+
+<strong>Tests:</strong>
 <p>
-  Para executar os testes unitários, basta executar o seguinte comando: <br />
+  To running the unit tests, just run the following command: <br />
   <ul>
     <li>
-      <strong>se estiver utilizando NPM: </strong> <br />
+      <strong>if using NPM: </strong> <br />
       <code>npm run test</code>
     </li>
     <li>
-      <strong>se estiver utilizando Yarn: </strong> <br />
+      <strong>if using Yarn: </strong> <br />
       <code>yarn test</code>
     </li>
   </ul>
